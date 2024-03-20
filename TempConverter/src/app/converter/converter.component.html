@@ -1,0 +1,19 @@
+<!-- Develop an Angular application to convert temperatures from Celsius to Fahrenheit and vice-versa.  -->
+<div class="container mt-5">
+    <div class="card text-center" style="background-color: #e5798f;">
+      <div class="card-body">
+        <h1 class="card-title">Welcome To the Temperature Converter</h1>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <label for="celcius">Celcius</label>
+            <input type="number" class="form-control" name="celcius" [(ngModel)]="celcius" placeholder="Enter value in celcius">
+            <p>{{ toFahrenheit(celcius) }}</p>
+          </div>
+          <div class="col-md-6">
+            <label for="fahrenheit">Fahrenheit</label>
+            <input type="number" class="form-control" name="fahrenheit" [(ngModel)]="fahrenheit" (input)="toCelcius(fahrenheit)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
